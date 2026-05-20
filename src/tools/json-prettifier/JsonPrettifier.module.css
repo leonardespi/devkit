@@ -1,0 +1,132 @@
+.workspace {
+  display: flex;
+  gap: var(--space-4);
+  flex: 1;
+  min-height: 0;
+}
+
+.inputPanel,
+.treePanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: var(--space-2);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.inputArea {
+  flex: 1;
+}
+
+.inputArea.error {
+  border-color: var(--danger);
+}
+
+.errorBadge {
+  font-size: var(--text-xs);
+  color: var(--danger);
+  font-family: var(--font-mono);
+  padding: var(--space-1) var(--space-2);
+  background: rgba(248, 81, 73, 0.1);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--danger);
+  flex-shrink: 0;
+}
+
+.searchInput {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  padding: 4px 10px;
+  font-size: var(--text-sm);
+  outline: none;
+  width: 200px;
+  font-family: var(--font-sans);
+  transition: border-color var(--transition);
+}
+
+.searchInput:focus {
+  border-color: var(--accent);
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.treeScroll {
+  flex: 1;
+  overflow: auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.emptyState {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  font-family: var(--font-sans);
+}
+
+/* Tree nodes */
+.tree {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+.node {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  padding: 1px 0;
+  white-space: nowrap;
+}
+
+.collapsible {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 2px 0;
+  user-select: none;
+  gap: 4px;
+}
+
+.collapsible:hover .bracket {
+  color: var(--accent);
+}
+
+.chevron {
+  color: var(--text-muted);
+  font-size: 10px;
+  width: 14px;
+  flex-shrink: 0;
+}
+
+.key   { color: #79b8ff; }
+.string { color: #9ecbff; }
+.number { color: #f8c555; }
+.bool  { color: #f97583; }
+.null  { color: #6a737d; }
+.bracket { color: var(--text-secondary); font-weight: 500; }
+.preview { color: var(--text-muted); }
+
+.highlight {
+  background: rgba(210, 153, 34, 0.35);
+  color: var(--warning);
+  border-radius: 2px;
+}
