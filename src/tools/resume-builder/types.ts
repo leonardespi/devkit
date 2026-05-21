@@ -32,12 +32,15 @@ export type ProjectItem = {
   description?: string; // newline separated
 };
 
+export type SectionKey = 'education' | 'experience' | 'projects' | 'skills';
+
 export type ResumeData = {
   contact: Contact;
   education: EducationItem[];
   experience: ExperienceItem[];
   projects: ProjectItem[];
   skills: string; // comma separated
+  sectionOrder?: SectionKey[];
 };
 
 export type PdfConfig = {

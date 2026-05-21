@@ -94,6 +94,12 @@
   justify-content: space-between;
 }
 
+.blockHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
 .blockTitle {
   font-size: var(--text-sm);
   font-weight: 600;
@@ -248,3 +254,24 @@
 }
 
 .previewDoc a { color: #0366d6; }
+
+/* Drag & drop */
+.dragHandle {
+  cursor: grab;
+  color: var(--text-muted);
+  font-size: 15px;
+  padding: 0 4px;
+  line-height: 1;
+  user-select: none;
+  flex-shrink: 0;
+  opacity: 0.4;
+  transition: opacity var(--transition);
+}
+
+.dragHandle:hover { opacity: 1; }
+.dragHandle:active { cursor: grabbing; }
+
+.dragOver {
+  border-color: var(--accent) !important;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
